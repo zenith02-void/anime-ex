@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Anime App</title>
+</head>
+<body>
+  <h1>Anime List (WCO TV)</h1>
+  <ul id="anime-list"></ul>
+
+  <script src="wco-extension.js"></script>
+  <script>
+    (async () => {
+      const list = await window.latestExtension.getAnimeList();
+      const ul = document.getElementById("anime-list");
+
+      list.forEach(anime => {
+        const li = document.createElement("li");
+        li.innerHTML = `<strong>${anime.title}</strong> — <a href="${anime.streamUrl}" target="_blank">Watch</a>`;
+        ul.appendChild(li);
+      });
+    })();
+  </script>
+</body>
+</html>
