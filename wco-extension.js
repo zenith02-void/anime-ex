@@ -8,6 +8,10 @@ window.latestExtension = {
     {
       title: "Bleach",
       streamUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+    },
+    {
+      title: "One Piece",
+      streamUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
     }
   ]
 };
